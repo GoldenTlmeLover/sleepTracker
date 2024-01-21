@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="../public/output.css" rel="stylesheet">
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,800;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-slate-700 flex h-screen flex-col justify-center items-center">
+    <div class="lg:max-w-screen-lg md:max-w-screen-md xl:max-w-screen-xl">
+        <header class="">
+            <h1 class="text-center font-nunito font-extrabold text-6xl text-slate-200">SLEEP TRACKER</h1>
+            <p class="text-center font-nunito font-medium text-lg text-slate-400 p-2">Introducing the Ultimate Sleep Tracker! Track your sleep effortlessly by simply entering the date and hours you've slept below. Hit submit, and voila! I'll generate a personalized graphic displaying your sleep patterns. Say goodbye to restless nights and hello to a well-rested you. Enjoy the journey to better sleep with our intuitive sleep tracking tool!</p>
+        </header>
+
+        <div>
+            <form class="p-1">
+                <input type="date" id="dateInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full ps-5 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white pr-5">
+            </form>
+            <form class="p-1">
+                <input type="number" id="hoursInput" min="0" max="24" step="1" class="text-sm rounded-lg w-full ps-5 p-2.5 bg-gray-50 border border-gray-300 text-gray-900 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Hours of sleep">
+            </form>
+        </div>
+        <div class="p-3 ">
+            <button type="button" onclick="postSleepTrack()" class="text-sm rounded-lg block w-full  p-5 bg-cyan-600 hover:bg-cyan-500 font-nunito font-medium">SUBMIT</button>
+        </div>
+
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="../src/getSleepTrack.js"></script>
+    <script type="text/javascript" src="../src/postSleepTrack.js"></script>
+    <script type="module" src="../src/chart.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./public/main.css -o ./public/output.css --watch"
+  },
+  "dependencies": {
+    "https": "^1.0.0"
+  }
+}
